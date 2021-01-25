@@ -2,7 +2,7 @@
 <b>Awang Praja Anugerah</b>
 
 # Description :clipboard:
-Movie Searcher Website is a website that you can use to search for films by title. This website already has a responsive appearance. In addition, this website also shows the rating of a film. This website is created with the React JS framework and uses The Movie Database (TMDb) API to display movie data data.
+Movie Searcher Website is a website that you can use to search for films by title. This website already has a responsive appearance. In addition, this website also shows the rating of a film. This website is created with the React JS framework and uses The Movie Database (TMDb) API to display movie data.
 
 <img src="./website_searcher_demo.gif" width="100%" height="500px"/>
 
