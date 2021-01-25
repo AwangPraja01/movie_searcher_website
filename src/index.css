@@ -1,0 +1,214 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: #0e1821;
+  color: #f3f9fb;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.App {
+  padding: 50px 100px;
+}
+
+.main_container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  border: 5px solid #f3f9fb;
+  border-radius: 5px;
+}
+
+.item_movie_container {
+  margin: 10px;
+  flex: 25%;
+  position: relative;
+  width: max-content;
+  height: max-content;
+  overflow: hidden;
+}
+
+.item_movie_container:hover {
+  cursor: pointer;
+}
+
+.lazy-load-image-background.blur.lazy-load-image-loaded img {
+  transition: transform 1s, filter 0.5s ease-out !important;
+}
+
+.movie_img {
+  width: 100%;
+  max-height: 400px;
+  transition: all 1s, filter 0.5s ease-out;
+}
+
+.movie_img:hover {
+  transform: scale(1.5);
+}
+
+.movie_info {
+  color: white;
+  padding: 5px 10px;
+  top: 0;
+  position: absolute;
+  z-index: 9999;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+}
+
+.movie_title {
+  padding: 8px 10px;
+  width: 100%;
+  text-align: center;
+  color: #f3f9fb;
+  position: absolute;
+  background: #16213e;
+  bottom: 0;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 1.2em;
+}
+
+.star_icon {
+  color: white;
+  margin-inline-end: 5px;
+}
+
+.app_title {
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 2.5em;
+}
+
+.app_description {
+  margin: 20px 0;
+  text-align: justify;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 1.5em;
+}
+
+.search_movie_input {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.search_input,
+.search_input::placeholder {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 1em;
+  flex: 90%;
+  color: black;
+}
+
+.search_btn {
+  cursor: pointer;
+  background-color: white;
+  outline: none;
+  margin-left: 50px;
+  font-size: 1.5em;
+  flex: 10%;
+  border-radius: 20px;
+  border: none;
+}
+
+.search_btn:hover {
+  color: #23689b;
+}
+
+.search_input {
+  letter-spacing: 0.1em;
+  background-color: white;
+  border: none;
+  outline: none;
+  height: 40px;
+  padding: 15px 20px;
+  border-radius: 20px;
+}
+
+@media only screen and (max-width: 880px) {
+  .item_movie_container {
+    flex: 40%;
+  }
+}
+
+@media only screen and (max-width: 830px) {
+  .item_movie_container {
+    flex: 30%;
+  }
+
+  .search_input {
+    flex: 80%;
+  }
+
+  .search_btn {
+    flex: 20%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .app_title {
+    font-size: 2em;
+  }
+
+  .app_description {
+    font-size: 1.3em;
+  }
+
+  .item_movie_container {
+    flex: 100%;
+  }
+
+  .App {
+    padding: 50px;
+  }
+
+  .search_input {
+    flex: auto;
+  }
+
+  .search_btn {
+    flex: auto;
+    margin-left: 20px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .search_btn {
+    display: none;
+  }
+
+  .app_description {
+    font-size: 1.2em;
+  }
+}
+
+@media only screen and (max-width: 330px) {
+  .app_title {
+    font-size: 1.8em;
+  }
+
+  .App {
+    padding: 50px 40px;
+  }
+
+  .search_input {
+    flex: 100%;
+  }
+}
